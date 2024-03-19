@@ -1,0 +1,22 @@
+# Brain-Tumor-detection-and-segmentation-using-deep-learning
+This research focuses on brain tumor detection and segmentation using Convolutional Neural 
+Networks (CNN) with architectures of Fully Convolutional Network (FCN) and VGG16. The 
+central purposes of this research include image preprocessing, data augmentation, feature 
+extraction, image segmentation, and image classification. 
+The dataset imported for this project consists of brain MRI images, which were preprocessed 
+to improve the overall image resolution. Data augmentation techniques were applied to 
+heighten the variability and volume of the training data. For feature extraction, CNN models 
+were utilized, specifically the VGG16 architectures. This model was trained on a preprocessed 
+dataset to learn the important features associated with brain tumor presence. Image 
+segmentation was performed to precisely outline and identify the tumor region within the brain 
+images. FCN architecture was employed for this task, which allowed pixel-level classification 
+of tumor regions. Finally, image classification was carried out to group brain images based on 
+the absence or presence of a tumor. The trained models were evaluated using accuracy, 
+precision, recall and F1score as the performance metrics.
+The results of the project demonstrated promising outcomes, achieving an accuracy score of 
+93% and a precision, recall and f1score ranging from 75% to 100% based on the specific type 
+of tumor enlisted. This indicates that the developed CNN models, with the FCN and VGG16 
+architectures, effectively detect and segment brain tumors from MRI images. The findings of 
+this study contribute to the field of medical image analysis and gives a foundation for further 
+research and development in brain tumor diagnosis and treatment.
+I recommend the use of more deep learning algorithms for the process of detecting brain tumor.
