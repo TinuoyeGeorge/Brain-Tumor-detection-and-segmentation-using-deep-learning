@@ -1,0 +1,59 @@
+#Project methodology
+To carry out this project on MRI input data, a CNN model with a VGG-16 architecture will 
+be utilized to find tumors. An online dataset from Kaggle will be imported, it contains Brain
+MRI images for detection of Brain Tumors. The project work will be carried out on Kaggle 
+online repository. We'll utilize these images for both our training set and testing set. The steps 
+involved in this project are as follows:
+Image Pre-Processing: Here the images gotten from Kaggle will be pre-processed which is a 
+technique for image enhancement and noise removal for a better end result. The first step we 
+need to do is normalization. Normalization is the technique of pre-processing and 
+ImageDataGenerator is the tool used to carry this process out.
+              Fig 1.1 Sample of Input Images
+
+To further clarify using the photos above in Figure 1.1, the first image shows the input 
+image that needs pre-processing, and the second shows the second pre-processing step, in 
+which we must locate the highest contour. Here, we must now locate the brain's margins. 
+In order to accurately crop the brain out of the image, we must pinpoint the extreme points 
+in the third image. The ideal pre-processed image is the fourth picture.
+i. Data augmentation: This entails employing an image data generator to provide 
+variations to our data samples by performing operations on our previously processed 
+images such as flipping, rotating, shearing, etc. The purpose of data augmentation is to 
+raise our model's accuracy. ImageDataGenerator will be the tool employed. Image data 
+augmentation is a technique used to increase the size of a training dataset for machine 
+learning algorithms by creating additional training samples. Image Data Generator is a 
+popular tool used to perform data augmentation in deep learning applications. By 
+applying different transformations like rotation, the original images are modified to 
+create augmented images, zooming, shifting, flipping, and changing the brightness or 
+contrast. Data augmentation will be followed by the establishment of our Test and Train 
+sets, which will be utilized to build our model, which will then be used to carry out the 
+next processes.
+ii. Feature Extraction: Pre-training VGG16 on a sizable dataset of MRI images is 
+required in order to derive its weights and extract features. This is achieved by 
+processing your brain MRI scans via the convolutional layers of the VGG16 model to 
+act as a feature extractor. The model is trained for brain tumor identification and 
+segmentation by the extracted characteristics. The model is used to forecast the 
+existence and location of tumors in fresh brain MRI scans once it has been trained.
+6
+iii. Image segmentation: The system employs preprocessing techniques on the selected 
+image to enhance its quality. In order to locate the tumor within the image, multiple 
+algorithms are employed simultaneously. However, during the first stages of a brain 
+tumor, the edges of the image may not be clearly defined. To address this challenge, 
+we utilize image segmentation. For this purpose, we exclusively employ the FCN 
+(Fully Convolutional Network) architecture. Our model would be trained using the 
+CNN algorithm with its VGG16 architecture.
+The image segmentation process involves partitioning the image into distinct regions 
+based on their semantic meaning. This partitioned area serves as the training data for 
+our deep learning algorithms. To train our model, we utilize a CNN (Convolutional 
+Neural Network) model with the VGG16 architecture. This architecture is known for 
+its ability to extract informative features from images, enabling accurate tumor 
+segmentation.
+By combining the power of FCN and VGG16, our system effectively identifies the 
+tumor region within the brain image. The utilization of FCN allows us to overcome the 
+challenges posed by the indistinct edges of early-stage brain tumors. Meanwhile, the 
+VGG16 architecture provides a robust framework for training our model and achieving 
+accurate and reliable results in the image segmentation process.
+iv. Image classification: Our training data will next be applied to image classification, 
+where our images will indicate if a brain tumor is present (showing the exact type of 
+tumor) or absent. Python programming will be used to validate the training data 
+findings during this phase. The final estimates or outcomes predicted by the network 
+will be generated employing the outcome layer of our CNN model.
